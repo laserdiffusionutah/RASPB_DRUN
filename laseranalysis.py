@@ -25,7 +25,7 @@ transform = reorder(middle_round,pts)
 #        ###THis portion of the code orders the points for transform image
 Im  = transform_image(I,transform)
 I_av = filter_rgb_weight(Im,a=10,b=1,c=10)
-x,y = Image_norm(I_av,pixel_num=2,area=300)
+y,x = Image_norm(I_av,pixel_num=2,area=300)
 xplot,yplot = fix_skewed(x,y)
 D_2,D_2u,C1,C2,C3 = diffuse_fit(xplot,yplot,t_actual,0)
 line = "\n"
